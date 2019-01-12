@@ -1,1 +1,19 @@
 theme: jekyll-theme-cayman
+
+title: Les jardins d'Aujà
+description: Bienvenue sur la page des jardins.<br> Vous y trouverez de l'actualité régionale et nationale, des conseils,..
+
+show_downloads: false
+
+github:
+  is_project_page: false
+
+navigation:
+  - title: Accueil
+    url: /
+  - title: Jardins
+    url: /jardins
+  - title: Poulailler
+    url: /poulailler
+  - title: Graines
+    url: /graines
