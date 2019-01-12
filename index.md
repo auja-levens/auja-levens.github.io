@@ -14,6 +14,17 @@ Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 ---
 
+- [Lien vers un 1er article]({% post_url 2017-11-11-evolution-du-site %})
+- [Lien vers un 2ème article]({% post_url 2018-01-12-moteur_blog %})
+
+---
+
+### Liens vers les 3 derniers articles
+
+{% for post in site.posts limit:3 %}
+- [{{ post.title }}]({{ post.url }}){% endfor %}
+
+---
 
 There should be whitespace between paragraphs.
 
