@@ -3,7 +3,7 @@
 
 // Theme overrides START
 // https://github.com/pages-themes/cayman/blob/master/_sass/variables.scss
-$section-headings-color: #88B508 !default;
+$section-headings-color: #3D9970 !default;
 
 // Theme overrides START
 
@@ -34,15 +34,6 @@ $spinnerGrey: #f3f3f3;
   opacity: 0.62;
 }
 
-// nav ul {
-//   list-style-type: none;
-// }
-// nav li {
-//   line-height: 30px;
-// }
-// nav a {
-//   text-decoration: none;
-// }
 nav li.active a {
   color: #ffffff;
   background: $section-headings-color;
@@ -116,3 +107,24 @@ nav {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+// Image gallery START
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	flex-direction: row;
+	//max-height: 100vh;
+}
+.card {
+	margin: 0 3px 10px 3px;
+	border: 0px solid #444;
+	box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.5);
+	max-width: 32%;
+}
+
+.card-title {
+  text-align: center;
+  margin: 0 0 6px 0;
+}
+// Image gallery STOP
