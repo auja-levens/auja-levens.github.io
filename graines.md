@@ -19,7 +19,7 @@
 </table>
 
 <script>
-//(function(){})();
+(function(){
 
 var url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRnjpwv9eYPwZx__7-8H4EYoe7Zs4yXZwCAuPJuxNEfj3LgInGX6-e-94SI7BPI7FF7YrVqP3NYO3bN/pub?gid=1185466709&single=true&output=tsv';
 var stock = document.getElementById('stock');
@@ -34,21 +34,29 @@ fetch(url, opts).then(function (response) {
 })
     .then(function (text) {
         var lines = text.split("\n")
-        var i, l, cols, row, cell0, cell1;
+        var i, l, cols, row, cell0, cell1, notInStock;
         for(i = lines.length-1; i > 1; i--) { // skip bogus headers in tsv (0, 1)
             l = lines[i];
             cols = l.split('\t')
+            notInStock = parseInt(cols[1]) <= 0;
             row = stock.insertRow(1); // skip table header
 
             cell0 = row.insertCell(0)
             cell0.innerHTML = cols[0];
+            if (notInStock) {
+                cell0.style.textDecorationLine = 'line-through'
+            }
 
             cell1 = row.insertCell(1)
             cell1.innerHTML = cols[1];
             cell1.style.textAlign = "right"
+            if (notInStock) {
+                cell1.style.color = '#FF4136';
+            }
         }
 
     });
+})();
 </script>
 
 <hr>
