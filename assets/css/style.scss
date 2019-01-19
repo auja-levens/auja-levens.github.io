@@ -125,6 +125,12 @@ nav {
 	max-width: 32%;
 }
 
+@media screen and (max-width: 640px) {
+  .card {
+    width: 100%;
+  }
+}
+
 .card-title {
   text-align: center;
   margin: 0 0 6px 0;
