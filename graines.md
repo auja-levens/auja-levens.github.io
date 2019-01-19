@@ -6,7 +6,8 @@
 
 #### 1. Injection via javascript
 
-<table id="stock">
+<div id="tableSpinner" class="spinner"></div>
+<table id="stock" style="display: none;">
   <thead>
     <tr>
      <th>Variété</th>
@@ -23,6 +24,7 @@
 
 var url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRnjpwv9eYPwZx__7-8H4EYoe7Zs4yXZwCAuPJuxNEfj3LgInGX6-e-94SI7BPI7FF7YrVqP3NYO3bN/pub?gid=1185466709&single=true&output=tsv';
 var stock = document.getElementById('stock');
+var tableSpinner = document.getElementById('tableSpinner');
 
 var opts = {
     method: 'GET',
@@ -53,8 +55,9 @@ fetch(url, opts).then(function (response) {
             if (notInStock) {
                 cell1.style.color = '#FF4136';
             }
-        }
-
+        } // for
+        tableSpinner.remove();
+        stock.style.display = ""
     });
 })();
 </script>
