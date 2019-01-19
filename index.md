@@ -14,8 +14,8 @@ Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 ---
 
-- [Lien vers un 1er article]({% post_url 2017-11-11-evolution-du-site %})
-- [Lien vers un 2ème article]({% post_url 2018-01-12-moteur_blog %})
+- [Lien vers un 1er article]({% post_url 2018-11-11-evolution-du-site %})
+- [Lien vers un 2ème article]({% post_url 2019-01-12-moteur_blog %})
 
 ---
 
