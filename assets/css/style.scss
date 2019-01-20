@@ -64,6 +64,7 @@ nav {
 
   li a:hover, .dropdown:hover .dropbtn {
     background-color: $section-headings-color;
+    text-decoration: none;
     color: #fff;
   }
 

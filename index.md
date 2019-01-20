@@ -2,6 +2,14 @@
 layout: default
 ---
 
+### 10 derniers articles
+
+{% for post in site.posts limit:10 %}
+1. [{{ post.title }}]({{ post.url }}), posté le {{post.date | date: "%-d %b"}}{% endfor %}
+
+---
+
+
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 ---
@@ -16,13 +24,6 @@ Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 - [Lien vers un 1er article]({% post_url 2018-11-11-evolution-du-site %})
 - [Lien vers un 2ème article]({% post_url 2019-01-12-moteur_blog %})
-
----
-
-### Liens vers les 3 derniers articles
-
-{% for post in site.posts limit:3 %}
-- [{{ post.title }}]({{ post.url }}){% endfor %}
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Organigramme
+title: Exemple d'un organigramme
 layout:
 ---
 

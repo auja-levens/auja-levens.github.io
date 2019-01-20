@@ -1,5 +1,5 @@
 ---
-title:  Inventaire botanique3
+title:  Inventaire botanique
 categories: [site]
 
 public-bucket-url: https://storage.googleapis.com/auja-public
